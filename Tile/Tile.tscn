@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Tile/Tile.gd" type="Script" id=1]
+
+[node name="Tile" type="TextureButton"]
+margin_right = 60.0
+margin_bottom = 60.0
+shortcut_in_tooltip = false
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_as_outline = 2
+text = "00"
+align = 1
+valign = 1
+
+[connection signal="pressed" from="." to="." method="_on_Tile_pressed"]

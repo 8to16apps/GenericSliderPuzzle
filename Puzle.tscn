@@ -1,0 +1,137 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Tile/Tile.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Puzle.gd" type="Script" id=2]
+
+[node name="Puzle" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -784.0
+margin_bottom = -360.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+TilesArray = [ NodePath("Tile1"), NodePath("Tile2"), NodePath("Tile3"), NodePath("Tile4"), NodePath("Tile5"), NodePath("Tile6"), NodePath("Tile7"), NodePath("Tile8"), NodePath("Tile9"), NodePath("Tile10"), NodePath("Tile11"), NodePath("Tile12"), NodePath("Tile13"), NodePath("Tile14"), NodePath("Tile15") ]
+
+[node name="Tile1" parent="." instance=ExtResource( 1 )]
+TileColor = Color( 1, 0, 0, 1 )
+
+[node name="Tile2" parent="." instance=ExtResource( 1 )]
+margin_left = 60.0
+margin_right = 120.0
+TileColor = Color( 0, 1, 0, 1 )
+TileNum = 1
+
+[node name="Tile3" parent="." instance=ExtResource( 1 )]
+margin_left = 120.0
+margin_right = 180.0
+TileColor = Color( 0, 0, 1, 1 )
+TileNum = 2
+
+[node name="Tile4" parent="." instance=ExtResource( 1 )]
+margin_left = 180.0
+margin_right = 240.0
+TileColor = Color( 1, 1, 0, 1 )
+TileNum = 3
+
+[node name="Tile5" parent="." instance=ExtResource( 1 )]
+margin_top = 60.0
+margin_bottom = 120.0
+TileColor = Color( 0.752941, 0, 0, 1 )
+TileNum = 4
+
+[node name="Tile6" parent="." instance=ExtResource( 1 )]
+margin_left = 60.0
+margin_top = 60.0
+margin_right = 120.0
+margin_bottom = 120.0
+TileColor = Color( 0, 0.752941, 0, 1 )
+TileNum = 5
+
+[node name="Tile7" parent="." instance=ExtResource( 1 )]
+margin_left = 120.0
+margin_top = 60.0
+margin_right = 180.0
+margin_bottom = 120.0
+TileColor = Color( 0, 0, 0.752941, 1 )
+TileNum = 6
+
+[node name="Tile8" parent="." instance=ExtResource( 1 )]
+margin_left = 180.0
+margin_top = 60.0
+margin_right = 240.0
+margin_bottom = 120.0
+TileColor = Color( 0.752941, 0.752941, 0, 1 )
+TileNum = 7
+
+[node name="Tile9" parent="." instance=ExtResource( 1 )]
+margin_top = 120.0
+margin_bottom = 180.0
+TileColor = Color( 0.501961, 0, 0, 1 )
+TileNum = 8
+
+[node name="Tile10" parent="." instance=ExtResource( 1 )]
+margin_left = 60.0
+margin_top = 120.0
+margin_right = 120.0
+margin_bottom = 180.0
+TileColor = Color( 0, 0.501961, 0, 1 )
+TileNum = 9
+
+[node name="Tile11" parent="." instance=ExtResource( 1 )]
+margin_left = 120.0
+margin_top = 120.0
+margin_right = 180.0
+margin_bottom = 180.0
+TileColor = Color( 0, 0, 0.501961, 1 )
+TileNum = 10
+
+[node name="Tile12" parent="." instance=ExtResource( 1 )]
+margin_left = 180.0
+margin_top = 120.0
+margin_right = 240.0
+margin_bottom = 180.0
+TileColor = Color( 0.501961, 0.501961, 0, 1 )
+TileNum = 11
+
+[node name="Tile13" parent="." instance=ExtResource( 1 )]
+margin_top = 180.0
+margin_bottom = 240.0
+TileColor = Color( 0.25098, 0, 0, 1 )
+TileNum = 12
+
+[node name="Tile14" parent="." instance=ExtResource( 1 )]
+margin_left = 60.0
+margin_top = 180.0
+margin_right = 120.0
+margin_bottom = 240.0
+TileColor = Color( 0, 0.25098, 0, 1 )
+TileNum = 13
+
+[node name="Tile15" parent="." instance=ExtResource( 1 )]
+margin_left = 120.0
+margin_top = 180.0
+margin_right = 180.0
+margin_bottom = 240.0
+TileColor = Color( 0, 0, 0.25098, 1 )
+TileNum = 14
+
+[node name="slide" type="Tween" parent="."]
+
+[connection signal="TrySlide" from="Tile1" to="." method="TrySlideTile"]
+[connection signal="TrySlide" from="Tile2" to="." method="TrySlideTile"]
+[connection signal="TrySlide" from="Tile3" to="." method="TrySlideTile"]
+[connection signal="TrySlide" from="Tile4" to="." method="TrySlideTile"]
+[connection signal="TrySlide" from="Tile5" to="." method="TrySlideTile"]
+[connection signal="TrySlide" from="Tile6" to="." method="TrySlideTile"]
+[connection signal="TrySlide" from="Tile7" to="." method="TrySlideTile"]
+[connection signal="TrySlide" from="Tile8" to="." method="TrySlideTile"]
+[connection signal="TrySlide" from="Tile9" to="." method="TrySlideTile"]
+[connection signal="TrySlide" from="Tile10" to="." method="TrySlideTile"]
+[connection signal="TrySlide" from="Tile11" to="." method="TrySlideTile"]
+[connection signal="TrySlide" from="Tile12" to="." method="TrySlideTile"]
+[connection signal="TrySlide" from="Tile13" to="." method="TrySlideTile"]
+[connection signal="TrySlide" from="Tile14" to="." method="TrySlideTile"]
+[connection signal="TrySlide" from="Tile15" to="." method="TrySlideTile"]
+[connection signal="tween_completed" from="slide" to="." method="_on_slide_tween_completed"]
